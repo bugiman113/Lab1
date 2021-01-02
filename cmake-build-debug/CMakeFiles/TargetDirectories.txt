@@ -1,3 +1,0 @@
-C:/untitled7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/untitled7/cmake-build-debug/CMakeFiles/untitled7.dir
-C:/untitled7/cmake-build-debug/CMakeFiles/edit_cache.dir
