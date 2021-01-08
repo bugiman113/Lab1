@@ -1,4 +1,5 @@
 #include "Libr.h"
+uint32_t numb_by_xy(const uint64_t width, const uint64_t x, const uint64_t y);
 
 void create_img(struct image *image, const uint64_t w, const uint64_t h){
     image->width = w;
@@ -11,7 +12,7 @@ void destroy_img(struct image *image){
     }
     image->data=NULL;
 }
-/* создаёт копию изображения, которая повёрнута на 90 градусов */
+
 struct image rotate1(struct image const source) {
     struct image dest;
     uint32_t my=source.width;

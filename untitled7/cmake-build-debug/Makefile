@@ -142,6 +142,33 @@ untitled7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/build
 .PHONY : untitled7/fast
 
+Check.obj: Check.c.obj
+
+.PHONY : Check.obj
+
+# target to build an object file
+Check.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Check.c.obj
+.PHONY : Check.c.obj
+
+Check.i: Check.c.i
+
+.PHONY : Check.i
+
+# target to preprocess a source file
+Check.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Check.c.i
+.PHONY : Check.c.i
+
+Check.s: Check.c.s
+
+.PHONY : Check.s
+
+# target to generate assembly for a file
+Check.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Check.c.s
+.PHONY : Check.c.s
+
 Read_Write_file.obj: Read_Write_file.c.obj
 
 .PHONY : Read_Write_file.obj
@@ -286,6 +313,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... untitled7
+	@echo ... Check.obj
+	@echo ... Check.i
+	@echo ... Check.s
 	@echo ... Read_Write_file.obj
 	@echo ... Read_Write_file.i
 	@echo ... Read_Write_file.s

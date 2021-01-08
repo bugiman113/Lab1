@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/untitled7/Check.c" "C:/untitled7/cmake-build-debug/CMakeFiles/untitled7.dir/Check.c.obj"
   "C:/untitled7/Read_Write_file.c" "C:/untitled7/cmake-build-debug/CMakeFiles/untitled7.dir/Read_Write_file.c.obj"
   "C:/untitled7/Speaks.c" "C:/untitled7/cmake-build-debug/CMakeFiles/untitled7.dir/Speaks.c.obj"
   "C:/untitled7/image.c" "C:/untitled7/cmake-build-debug/CMakeFiles/untitled7.dir/image.c.obj"

@@ -22,13 +22,13 @@ struct bmp_header {
     uint32_t biYPelsPerMeter;
     uint32_t biClrUsed;
     uint32_t biClrImportant;
-}bmpHeader;
+};
 #pragma pack(pop)
 enum read_status  {
     READ_OK = 0,
     READ_INVALID_BITS = 2,
     READ_INVALID_HEADER = 3,
-    //FILE_NOT_FOUND = 4
+    FILE_NOT_FOUND = 4,
     READ_INVALID_SIGNATURE = 1,
 };
 enum  write_status  {
@@ -39,24 +39,22 @@ enum  write_status  {
 struct image {
     uint64_t width, height;
     struct pixel* data;
-}image0, image1;
+};
 struct pixel { uint8_t r, g, b; };
-struct bmp_header* bmpHeader1;
 struct image rotate1(const struct image source);
 
 void create_img(struct image *image, const uint64_t w, const uint64_t h);
 void destroy_img(struct image *img);
-void create_bmp_header( const uint64_t w, const uint64_t h);
-void check_Header();
-void check_pix(struct pixel const pix);
+struct bmp_header create_bmp_header(const uint64_t w, const uint64_t h, struct bmp_header bmpHeader);
 void print_newline();
+void error(FILE* file,const char* filename,struct image image0,struct image image1,int32_t e);
 
-enum read_status read_header( FILE* in);
-enum write_status write_header( FILE* file);
-enum read_status from_bmp1( FILE* in, struct image img);
-enum write_status to_bmp1( const char* filename,FILE* file, struct image img );
+enum read_status read_header( FILE* in,struct bmp_header* bmpHeader1);
+enum write_status write_header( FILE* file,struct bmp_header bmpHeader);
+enum read_status from_bmp1( FILE* in, struct image* img,struct bmp_header* bmpHeader1);
+enum write_status to_bmp1( const char* filename,FILE* file, struct image img, uint32_t mx,uint32_t my);
 
-const char *read_filename1();
-const char *read_filename2();
-uint32_t numb_by_xy(const uint64_t width, const uint64_t x, const uint64_t y);
+const char *read_filename1(int k);
+int checkingFile1(FILE* file,const char* filename);
+enum read_status checkingFile2(FILE* file,const char* filename,struct image image0);
 #endif
