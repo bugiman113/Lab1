@@ -4,6 +4,9 @@
 CMakeFiles/untitled7.dir/Check.c.obj: ../Check.c
 CMakeFiles/untitled7.dir/Check.c.obj: ../Libr.h
 
+CMakeFiles/untitled7.dir/Header.c.obj: ../Header.c
+CMakeFiles/untitled7.dir/Header.c.obj: ../Libr.h
+
 CMakeFiles/untitled7.dir/Read_Write_file.c.obj: ../Libr.h
 CMakeFiles/untitled7.dir/Read_Write_file.c.obj: ../Read_Write_file.c
 

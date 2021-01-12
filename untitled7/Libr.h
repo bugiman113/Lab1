@@ -41,20 +41,21 @@ struct image {
     struct pixel* data;
 };
 struct pixel { uint8_t r, g, b; };
-struct image rotate1(const struct image source);
+struct image image_turn(struct image const source, uint32_t my, uint32_t mx);
 
-void create_img(struct image *image, const uint64_t w, const uint64_t h);
-void destroy_img(struct image *img);
-struct bmp_header create_bmp_header(const uint64_t w, const uint64_t h, struct bmp_header bmpHeader);
+struct image image_create(struct image* image, const uint64_t w, const uint64_t h);
+void image_destroy(struct image *img);
+struct bmp_header header_bmp_create(const uint64_t w, const uint64_t h);
 void print_newline();
-void error(FILE* file,const char* filename,struct image image0,struct image image1,int32_t e);
+void error_message(int32_t e);
 
-enum read_status read_header( FILE* in,struct bmp_header* bmpHeader1);
-enum write_status write_header( FILE* file,struct bmp_header bmpHeader);
-enum read_status from_bmp1( FILE* in, struct image* img,struct bmp_header* bmpHeader1);
-enum write_status to_bmp1( const char* filename,FILE* file, struct image img, uint32_t mx,uint32_t my);
+enum read_status header_read(FILE* in, struct bmp_header* bmpHeader1);
+enum write_status header_write(FILE* file, struct bmp_header bmpHeader);
+enum read_status bmp_read(FILE* in, struct image* img, struct bmp_header* bmpHeader1);
+enum write_status bmp_create(FILE* file, struct image img, uint32_t mx, uint32_t my);
 
-const char *read_filename1(int k);
-int checkingFile1(FILE* file,const char* filename);
+const char* read_filename1(char s[]);
+const char* read_filename2(char s[]);
+void checkingFile1(FILE* file,const char* filename);
 enum read_status checkingFile2(FILE* file,const char* filename,struct image image0);
 #endif

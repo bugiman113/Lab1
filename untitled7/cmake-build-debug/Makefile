@@ -169,6 +169,33 @@ Check.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Check.c.s
 .PHONY : Check.c.s
 
+Header.obj: Header.c.obj
+
+.PHONY : Header.obj
+
+# target to build an object file
+Header.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Header.c.obj
+.PHONY : Header.c.obj
+
+Header.i: Header.c.i
+
+.PHONY : Header.i
+
+# target to preprocess a source file
+Header.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Header.c.i
+.PHONY : Header.c.i
+
+Header.s: Header.c.s
+
+.PHONY : Header.s
+
+# target to generate assembly for a file
+Header.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled7.dir\build.make CMakeFiles/untitled7.dir/Header.c.s
+.PHONY : Header.c.s
+
 Read_Write_file.obj: Read_Write_file.c.obj
 
 .PHONY : Read_Write_file.obj
@@ -316,6 +343,9 @@ help:
 	@echo ... Check.obj
 	@echo ... Check.i
 	@echo ... Check.s
+	@echo ... Header.obj
+	@echo ... Header.i
+	@echo ... Header.s
 	@echo ... Read_Write_file.obj
 	@echo ... Read_Write_file.i
 	@echo ... Read_Write_file.s

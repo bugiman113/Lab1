@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled7.dir/Check.c.obj"
+  "CMakeFiles/untitled7.dir/Header.c.obj"
   "CMakeFiles/untitled7.dir/Read_Write_file.c.obj"
   "CMakeFiles/untitled7.dir/Speaks.c.obj"
   "CMakeFiles/untitled7.dir/image.c.obj"
