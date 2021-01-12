@@ -10,7 +10,7 @@ int main(){
     /* open file and checking an open file */
     filename = read_filename1(str);
     FILE* file= fopen(filename,"rb");
-    checkingFile1(file,filename); // �஢�ઠ 䠩��,checkingFile
+    checkingFile1(file,filename); 
     bmpHeader1 = (struct bmp_header*)calloc(1, sizeof(struct bmp_header));
     enum read_status rs= header_read(file, bmpHeader1);
     if (rs!=READ_OK){error_message(1);fclose(file);}
