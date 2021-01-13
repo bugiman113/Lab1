@@ -6,7 +6,6 @@ enum read_status bmp_read(FILE* in, struct image* img, struct bmp_header* bmpHea
     uint32_t my = bmpHeader1->biHeight;
     uint32_t mx3 = (3*mx) % (-4);
     size_t str;
-    //áç¨âë¢ ­¨¥ ä ©« 
     for(uint32_t i = 0; i < my; ++i){
         uint32_t n= account_xy(mx, 0, i);
         str=fread(&img->data[n], sizeof(struct pixel), mx, in);
